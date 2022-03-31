@@ -7,25 +7,26 @@ import { Link } from "react-router-dom";
 const Card = (props) => {
   return (
     <>
-      <div className="card" style={{ width: "18rem" }}>
-        <img src={rigoImage} className="card-img-top" alt="..." />
+      <div className="card d-flex gap-3 animate__animated animate__zoomIn" id="tipos-card">
+        <img src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2021/01/The-Mandalorian-portada-scaled.jpeg?resize=1536%2C864&quality=50&strip=all&ssl=1" className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>
-          <p className="card-text">
-            {props.description}
-          </p>
-          <a href="" className="btn btn-primary">
-            {props.buttonLabel}
-          </a>
+          <p className="card-text">{props.description}</p>
+          <Link to="/details">
+            <a href={props.buttonURL} className="btn btn-outline-primary">
+              {props.buttonLabel}
+            </a>
+          </Link>
           <div className="d-grid gap-2 d-flex justify-content-md-end">
             <button
               className="btn btn-outline-warning me-md-2"
               type=""
-            ><AiFillHeart /></button>
+            >
+              <AiFillHeart />
+            </button>
           </div>
         </div>
       </div>
-
     </>
   );
 };
@@ -38,25 +39,3 @@ Card.propTypes = {
 };
 
 export default Card;
-
-
-{/* <div className="col-md-12">
-  <div className="card d-flex gap-3">
-    <img src={rigoImage} className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h5 className="card-title">{props.title}</h5>
-      <p className="card-text">{props.description}</p>
-      <Link to="/details">
-        <a href={props.buttonURL} className="btn btn-primary">
-          
-        </a>
-      </Link>
-      <div className="d-grid gap-2 d-flex justify-content-md-end">
-        <button
-          className="btn btn-outline-warning me-md-2"
-          type=""
-        ><AiFillHeart /></button>
-      </div>
-    </div>
-  </div>
-</div> */}

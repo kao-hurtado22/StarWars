@@ -4,15 +4,14 @@ import { Link } from "react-router-dom";
 
 
 
-export const Dashboard = props => {
+export const Dashboard = (props) => {
 	return (
 		<>
-
 			<div className="container border-0">
 				<div className="card mb-3 border-0">
 					<div className="row g-0">
 						<div className="col-md-4">
-							<img src={starwars} className="img-fluid" alt="..." />
+							<img src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2021/01/The-Mandalorian-portada-scaled.jpeg?resize=1536%2C864&quality=50&strip=all&ssl=1" className="img-fluid" alt="..." />
 						</div>
 						<div className="col-md-8">
 							<div className="card-body">
@@ -24,10 +23,10 @@ export const Dashboard = props => {
 					</div>
 				</div>
 			</div>
-			<Link to="/">			
-			<button className="btn btn-primary d-grid gap-2 col-1 mx-auto">
-				Back to Home
-			</button>
+			<Link to="/">
+				<button className="btn btn-primary d-grid gap-2 col-1 mx-auto">
+					Back to Home
+				</button>
 			</Link>
 			<div className="card-footer bg-black border-danger text-white text-center">
 				<a src="aquivalinks" />aquivalinks

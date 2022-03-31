@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaTrashAlt } from 'react-icons/fa'
+
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
@@ -31,10 +33,15 @@ export const Navbar = () => {
                 Favorites
               </button>
               <ul
-                className="dropdown-menu dropdown-menu-end"
+                className="dropdown-menu dropdown-menu-end py-3"
                 aria-labelledby="dropdownMenuButton1"
               >
                 <li>
+                  <a className="position-absolute bottom-0 end-0">
+                    <FaTrashAlt />
+                  </a>
+                </li>
+                {/* <li>
                   <a className="dropdown-item" href="#">
                     Action
                   </a>
@@ -48,7 +55,7 @@ export const Navbar = () => {
                   <a className="dropdown-item" href="#">
                     Something else here
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
