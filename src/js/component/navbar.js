@@ -37,8 +37,10 @@ export const Navbar = () => {
                 aria-labelledby="dropdownMenuButton1"
               >
                 <li>
-                  <a className="position-absolute bottom-0 end-0">
-                    <FaTrashAlt />
+                  <a className="position-absolute bottom-0 end-0" >
+                    <FaTrashAlt 
+                    id="basurero"
+                    />
                   </a>
                 </li>
                 {/* <li>

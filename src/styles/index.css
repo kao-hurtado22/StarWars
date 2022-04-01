@@ -31,3 +31,14 @@ body{
     box-shadow: 10px 10px 30px rgb(255, 255, 255);
     transform: translateY(-3%);
 }
+#btn-heart{
+    position: relative;
+    bottom: 40px;
+}
+
+#basurero{
+    width: 30px;
+    height: 24px;
+    padding-bottom: 4px;
+    color: black;
+}
