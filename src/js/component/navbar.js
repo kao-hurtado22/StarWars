@@ -10,9 +10,9 @@ export const Navbar = () => {
   return (
 
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
-      <div className="container-fluid">
+      <div className="container">
         <Link to="/" className="navbar-brand">
-          <img className="img-fluid" src={logo} height="50" width="150" />
+          <img  className="img-logo" src={logo} />
         </Link>
 
         <button
@@ -29,13 +29,13 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/characters" className="nav-link">Characters</Link>
+              <Link to="/characters" className="nav-link text-white"><b>| Characters </b></Link>
             </li>
             <li className="nav-item">
-              <Link to="/planets" className="nav-link">Planets</Link>
+              <Link to="/planets" className="nav-link text-white"><b>| Planets </b></Link>
             </li>
             <li className="nav-item">
-              <Link to="/starchips" className="nav-link">Starships</Link>
+              <Link to="/starchips" className="nav-link text-white"><b>| Starships </b></Link>
             </li>
           </ul>
           <div className="d-flex ms-auto">

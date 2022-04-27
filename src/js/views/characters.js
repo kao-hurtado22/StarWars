@@ -10,13 +10,14 @@ export const Characters = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
-              <img className="img-characters" src="https://i.blogs.es/69fdcc/star-wars-saga/1366_2000.jpg" />
+              <img className="img-characters" src="https://images.hdqwalls.com/wallpapers/darth-vader-burning-wrath-dk.jpg" />
             </div>
           </div>
         </div>
-        <div className="container-fluid">
+        <div className="container">
+          <h1 className="titulo">Characteres</h1>
           <div className="d-flex">
-          <CardCharacters/>
+            <CardCharacters />
           </div>
         </div>
       </div>
