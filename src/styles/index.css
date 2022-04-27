@@ -42,3 +42,27 @@ body{
     padding-bottom: 4px;
     color: black;
 }
+.img-characters{
+    width: 1280px;
+    height: 600px;
+    position: relative;
+    top: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px white ;
+}
+.img-planets{
+    width: 1280px;
+    height: 600px;
+    position: relative;
+    top: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px white ;
+}
+.img-starchips{
+    width: 1280px;
+    height: 800px;
+    position: relative;
+    top: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px white ;
+}

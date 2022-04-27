@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { FaTrashAlt } from 'react-icons/fa'
+import { Context } from "../store/appContext";
+import { FaTrashAlt } from 'react-icons/fa';
+import logo from '../../img/logostarwars.png'
+
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+
+    <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img className="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" height="50" width="150" />
-        </a>
+        <Link to="/" className="navbar-brand">
+          <img className="img-fluid" src={logo} height="50" width="150" />
+        </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -21,6 +27,17 @@ export const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/characters" className="nav-link">Characters</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/planets" className="nav-link">Planets</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/starchips" className="nav-link">Starships</Link>
+            </li>
+          </ul>
           <div className="d-flex ms-auto">
             <div className="dropdown">
               <button
@@ -33,31 +50,25 @@ export const Navbar = () => {
                 Favorites
               </button>
               <ul
-                className="dropdown-menu dropdown-menu-end py-3"
+                className="dropdown-menu dropdown-menu-end"
                 aria-labelledby="dropdownMenuButton1"
               >
-                <li>
-                  <a className="position-absolute bottom-0 end-0" >
-                    <FaTrashAlt 
-                    id="basurero"
-                    />
-                  </a>
-                </li>
-                {/* <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li> */}
+                {
+                  store.favorites !== undefined ?
+                    (
+                      store.favorites.map((item, index) => {
+                        return (
+                          <li key={index}>
+                            {item} <FaTrashAlt onClick={() => actions.removeFavorite(index)}></FaTrashAlt>
+                          </li>
+                        )
+                      })
+                    )
+                    :
+                    (
+                      <h1>Loading</h1>
+                    )
+                }
               </ul>
             </div>
           </div>
